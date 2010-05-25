@@ -40,6 +40,8 @@ Note: all the flashvars should be passed under :flahvars key in player_options a
 
 You can find list of supported flashvars "here":http://developer.longtailvideo.com/trac/wiki/Player5FlashVars
 
+It supports skin in both format either you can pass zip file or a swf file to skin flashvars.
+
 Note: Given relative path should be relative to public folder of your application.
 
 h2. Credits
