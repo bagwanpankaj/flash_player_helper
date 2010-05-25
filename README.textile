@@ -1,0 +1,53 @@
+h1. Flash Player Helper
+
+h2. What Is It?
+
+*Flash layer Helper* is a Rails plugin that presents an ActionView wrapper for rendering "JW Flash Player 5.1":http://www.longtailvideo.com/players/jw-flv-player/
+
+"JW Flash Player":http://www.longtailvideo.com/players/jw-flv-player/ is a popular open source Media player that supports most media formats.
+
+This helper is also backward compatible.
+
+h2. Getting Started
+
+@script/plugin install git://github.com/bagwanpankaj/flash_player_helper.git@
+
+This will automatically setup JW Flash Player for your rails application.
+
+If required files are not copied autometically under public directory then you can copy them by running
+
+@rake flash_player:install@
+
+h2. How to use
+
+Include swfobject javascript into layout or view file
+
+@<%= javascript_include_tag 'swfobject' %>@
+
+then In your views use it like
+
+@<%= player() %>@
+
+The above command will render flash player with default configuration.
+The helper method for flah player looks like:
+
+@ player(player_options = {},config = {}) @
+
+In which *player_options* contains options that you can pass for JW Flash Player, including flashvars supported by adobe flash.
+Note: all the flashvars should be passed under :flahvars key in player_options as a hash like
+
+@<%= player(:allowfullscreen   => 'true',:allowscriptaccess => 'true',{:flashvars => {:skin => '/swf/skins/bekle.swf', :height => '600'}})%>@
+
+You can find list of supported flashvars "here":http://developer.longtailvideo.com/trac/wiki/Player5FlashVars
+
+Note: Given relative path should be relative to public folder of your application.
+
+h2. Credits
+
+Credit for this plugin goes to JW Flash Player Team for making such a awsome flash player.
+
+h2. More Info
+
+For more info write me at bagwan.pankaj[at]railsjaipur.in or bagwanpankaj[at]gmail.com
+
+Copyright (c) 2010 Bagwan Pankaj, released under the MIT license
