@@ -2,7 +2,7 @@ h1. Flash Player Helper
 
 h2. What Is It?
 
-*Flash layer Helper* is a Rails plugin that presents an ActionView wrapper for rendering "JW Flash Player 5.1":http://www.longtailvideo.com/players/jw-flv-player/
+*Flash layer Helper* is a Rails plugin that presents an ActionView wrapper for rendering "JW Flash Player 5.1":http://www.longtailvideo.com/players/jw-flv-player/ and "Image Rotator":http://www.longtailvideo.com/players/jw-image-rotator/
 
 "JW Flash Player":http://www.longtailvideo.com/players/jw-flv-player/ is a popular open source Media player that supports most media formats.
 
@@ -25,20 +25,26 @@ Include swfobject javascript into layout or view file
 @<%= javascript_include_tag 'swfobject' %>@
 
 then In your views use it like
-
+For Flash Player
 @<%= player() %>@
 
-The above command will render flash player with default configuration.
-The helper method for flah player looks like:
+and for Image Rotator
+@<%= image_rotator() %>@
 
-@ player(player_options = {},config = {}) @
+The above command will render flash player or Image rotator with default configuration.
+The helper method for flah player looks like:
+@player(player_options = {},config = {})@
+
+and for Image Rotator
+@image_rotator(player_options = {},config = {})@
 
 In which *player_options* contains options that you can pass for JW Flash Player, including flashvars supported by adobe flash.
 Note: all the flashvars should be passed under :flahvars key in player_options as a hash like
 
 @<%= player(:allowfullscreen   => 'true',:allowscriptaccess => 'true',{:flashvars => {:skin => '/swf/skins/bekle.swf', :height => '600'}})%>@
 
-You can find list of supported flashvars "here":http://developer.longtailvideo.com/trac/wiki/Player5FlashVars
+You can find list of supported flashvars for Flash Player "here":http://developer.longtailvideo.com/trac/wiki/Player5FlashVars
+and flashvars for Image Rotator can be found "here":http://developer.longtailvideo.com/trac/wiki/ImageRotatorVars
 
 It supports skin in both format either you can pass zip file or a swf file to skin flashvars.
 
