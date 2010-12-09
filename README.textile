@@ -1,4 +1,4 @@
-h1. Flash Player Helper
+h1. Flash Player Helper(Rails 3.x and Rails 2.x Compatible)
 
 h2. What Is It?
 
@@ -10,7 +10,13 @@ This helper is also backward compatible.
 
 h2. Getting Started
 
+h3. Rails 2.x
+
 @script/plugin install git://github.com/bagwanpankaj/flash_player_helper.git@
+
+h3. Rails 3.x
+
+@rails plugin install git://github.com/bagwanpankaj/flash_player_helper.git@ 
 
 This will automatically setup JW Flash Player for your rails application.
 
@@ -56,6 +62,6 @@ Credit for this plugin goes to JW Flash Player Team for making such a awsome fla
 
 h2. More Info
 
-For more info write me at bagwan.pankaj[at]railsjaipur.in or bagwanpankaj[at]gmail.com
+For more info write me at bagwanpankaj[at]gmail.com
 
-Copyright (c) 2010 Bagwan Pankaj, released under the MIT license
+Copyright (c) 2010 Bagwan Pankaj: http://bagwanpankaj.com, released under the MIT license
